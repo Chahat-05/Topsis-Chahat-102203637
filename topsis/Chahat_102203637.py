@@ -5,16 +5,12 @@ import os
 
 def normalize(df):
     divisors = np.sqrt((df**2).sum(axis=0))
-    print(divisors)
-
-    df_normalized = df.div(divisors, axis=1)
-    print(df_normalized)
+    df_normalized = df.div(divisors, axis=1)    
     return df_normalized
 
 
 def weight_normalized(df, weights):
     df = df.mul(weights)
-    print(df)
     return df
 
 def best_worst(df, impacts):
@@ -41,9 +37,7 @@ def calc_performance(df, best, worst):
         # Calculate Euclidean distance to the worst point
         s_worst.append(np.sqrt(((df.loc[i] - worst)**2).sum()))  # Euclidean distance formula
 
-    print("s_best:", s_best)  # Debugging output to check s_best values
-    print("s_worst:", s_worst)  # Debugging output to check s_worst values
-
+    
     # Calculate the total sum of the best and worst distances
     s_total = [i + j for i, j in zip(s_worst, s_best)]
 
@@ -73,7 +67,7 @@ def topsis(input,weights, impacts):
     df = weight_normalized(df,weights)
 
     (best,worst) = best_worst(df,impacts)
-    print(best)
+    
     
     calc_performance(df,best,worst)
     rank(df)
@@ -83,7 +77,8 @@ def topsis(input,weights, impacts):
 
     return data
 
-if __name__=="__main__":
+
+def main():
     n= len(sys.argv)
     if (n!=5):
         print(n)
@@ -118,3 +113,6 @@ if __name__=="__main__":
 
     res = topsis(df, arg2, arg3)
     res.to_csv(r"{}".format(arg4), index=False)
+
+if __name__=="__main__":
+    main()
