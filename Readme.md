@@ -11,7 +11,9 @@ pip install Topsis-Chahat-102203637
 ```
 ## Usage
 Run the TOPSIS algorithm via the command line using the topsis-cli tool.
+```bash
 topsis-cli <input_file.csv> <weights> <impacts> <output_file.csv>
+```
 <input_file.csv>: Path to the input CSV file with alternatives and criteria.
 <weights>: Comma-separated list of weights for each criterion (e.g., 0.3, 0.4, 0.3).
 <impacts>: Comma-separated list of impacts for each criterion (+ for positive, - for negative).
