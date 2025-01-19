@@ -18,6 +18,6 @@ setup(
     long_description_content_type='text/markdown',
     author='Chahat',
     author_email='cverma_be22@thapar.edu',
-    url='https://github.com/yourusername/topsis_package',  # Replace with your repo URL
+    url='https://github.com/Chahat-05/Topsis-Chahat-102203637.git',  # Replace with your repo URL
     license='MIT',
 )

@@ -8,8 +8,8 @@ Install the package from PyPI using `pip`:
 
 ```bash
 pip install Topsis-Chahat-102203637
-
-Usage
+```
+## Usage
 Run the TOPSIS algorithm via the command line using the topsis-cli tool.
 topsis-cli <input_file.csv> <weights> <impacts> <output_file.csv>
 <input_file.csv>: Path to the input CSV file with alternatives and criteria.
