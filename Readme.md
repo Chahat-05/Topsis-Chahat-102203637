@@ -24,7 +24,7 @@ topsis-cli <input_file.csv> <weights> <impacts> <output_file.csv>
 ### Example
 ```bash
 topsis-cli input.csv 0.3,0.4,0.3 +,+,- output.csv
-
+```
 
 
 
